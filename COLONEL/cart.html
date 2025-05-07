@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        /* General Layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+            color: white;
+            text-align: center;
+        }
+
+        header nav {
+            margin: 0 auto;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        header nav a:hover {
+            background-color: #575757;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        /* Cart Container */
+        #cart-items {
+            width: 80%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .cart-item a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .cart-item input {
+            width: 60px;
+            padding: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .cart-item .price, .cart-item .total-price {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .remove-item {
+            background-color: #ff5e5e;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        .remove-item:hover {
+            background-color: #e04f4f;
+        }
+
+        /* Cart Summary */
+        #cart-summary {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #cart-summary p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        #cart-summary h3 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Cart Actions */
+        #cart-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .checkout-btn, .continue-shopping {
+            padding: 12px 20px;
+            font-size: 16px;
+            color: lightgoldenrodyellow;
+            background-color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .checkout-btn:hover, .continue-shopping:hover {
+            background-color: #575757;
+        }
+
+        .continue-shopping {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        /* Recommended Products Section */
+        #recommended-products {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #recommended-products h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #recommended-products a {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 16px;
+        }
+
+        #recommended-products a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+
+        footer nav a:hover {
+            background-color: #575757;
+        }
+
+        footer .social-media {
+            margin-top: 10px;
+        }
+
+        footer .social-media a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 10px;
+            margin: 0 5px;
+        }
+
+        footer .social-media a:hover {
+            background-color: #575757;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="HOME.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="formore.html">Contact Us</a>
+           
+        </nav>
+    </header>
+
+    <h1>COLONEL ONLINE SHOPPING</h1>
+    <p>You have <span id="cart-count">3</span> items in your cart.</p>
+
+    <div id="cart-items">
+        <div class="cart-item">
+            <img src="C:\Users\HomePC\Desktop\4f01b2adc5046c0764f51d5e439e87a4.jpg" alt="Product 1">
+            <a href="/product/1">Product Name</a>
+            <input type="number" value="1" min="3">
+            <input type="price"value 1="shs 10000">
+            <input type="total-price"value"1">
+            <button class="remove-item">Remove</button>
+        </div>
+        <!-- Repeat for other cart items -->
+    </div>
+
+    <div id="cart-summary">
+        <p>Subtotal: shs......</p>
+        <p>Shipping: shs 5000</p>
+        <p>Taxes: she2000</p>
+        <p>Discount: shs1000</p>
+        <h3>Estimated Total: shs 7000</h3>
+    </div>
+
+    <div id="cart-actions">
+         <a href="PAYMENT.html" class="PAYMENT">PAYMENT</a>
+        <a href="shop.html" class="continue-shopping">continue-shopping</a>
+    </div>
+
+    <section id="recommended-products">
+        <h2>Recommended for You</h2>
+        <a href="shop.html">Product 2</a>
+        <a href="shop.html">Product 3</a>
+        <!-- More recommended products -->
+    </section>
+
+    <footer>
+        <nav>
+            <a href="About.html">About Us</a> |
+            <a href="/privacy">Privacy Policy</a> |
+            <a href="/terms">Terms & Conditions</a> |
+            <a href="/faq">FAQ</a> |
+            <a href="support.html">Customer Support</a>
+        </nav>
+        <div class="social-media">
+            <a href="https://facebook.com">Facebook</a> |
+            <a href="https://twitter.com">Twitter</a> |
+            <a href="https://instagram.com">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

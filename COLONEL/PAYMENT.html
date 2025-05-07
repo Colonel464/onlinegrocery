@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colonel Online Shopping - Payment</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f7f7f7; }
+        .payment-form { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .payment-form h2 { text-align: center; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], input[type="number"], input[type="email"], select {
+            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;
+        }
+        .submit-btn { background-color: #1e90ff; color: white; padding: 12px; width: 100%; border: none; border-radius: 5px; cursor: pointer; }
+        .submit-btn:hover { background-color: #0b78e3; }
+    </style>
+</head>
+<body>
+
+<div class="payment-form">
+    <h2>Payment Details</h2>
+    <form action="thankyou.html" method="GET">
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cardnumber">Card Number</label>
+            <input type="number" id="cardnumber" name="cardnumber" required>
+        </div>
+
+        <div class="form-group">
+            <label for="expdate">Expiry Date</label>
+            <input type="text" id="expdate" name="expdate" placeholder="MM/YY" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="number" id="cvv" name="cvv" required>
+        </div>
+
+        <div class="form-group">
+            <label for="amount">Amount (SHS)</label>
+            <input type="number" id="amount" name="amount" required>
+        </div>
+
+         <a style="color:darkred;" href="sUB1MIT.html">submit payement</a>
+    </form>
+</div>
+
+</body>
+</html>
